@@ -1,6 +1,6 @@
 # Provider & Bridge
 
-> Belongs to: [Developer](API概览.md)　·　Related: [Attributes & Values](../02-服主指南/属性与数值.md) · [Integration](集成.md)
+> Belongs to: [Developer](./api-overview.md)　·　Related: [Attributes & Values](../02-server-guide/attributes-numbers.md) · [Integration](./integration.md)
 
 A Provider is an "external system payload" attached to an item, and a Bridge is the "bridge" that interprets it. This mechanism lets QI items carry arbitrary third-party system data without coupling.
 
@@ -128,7 +128,7 @@ interface QinhExternalItemResolver {
 }
 ```
 
-Registering an external resolver goes through `QinhIntegrationRegistry.registerExternalResolver(...)`, see [Integration](集成.md).
+Registering an external resolver goes through `QinhIntegrationRegistry.registerExternalResolver(...)`, see [Integration](./integration.md).
 
 ---
 
@@ -151,5 +151,5 @@ QinhIntegrationRegistry.dispatchItemCompiled(event)
 
 ## Next Steps
 
-- [Integration](集成.md): QinhSkills / Legendinlay / MagicGem bridge examples
-- [Layers & Assembly](层与装配.md): the difference between layers and Providers
+- [Integration](./integration.md): QinhSkills / Legendinlay / MagicGem bridge examples
+- [Layers & Assembly](./layers-assembly.md): the difference between layers and Providers

@@ -1,11 +1,11 @@
-> Previous: [物品API.md](物品API.md)　·　Next: [经济API.md](经济API.md)
-> Related: [API概览.md](API概览.md) · [物品API.md](物品API.md) · [经济API.md](经济API.md) · [../02-服主指南/脚本入门.md](../02-服主指南/脚本入门.md)
+> Previous: [物品API.md](./item-api.md)　·　Next: [经济API.md](./economy-api.md)
+> Related: [API概览.md](./api-overview.md) · [物品API.md](./item-api.md) · [经济API.md](./economy-api.md) · [../02-服主指南/脚本入门.md](../02-server-guide/scripting-intro.md)
 
 # 📜 Script API
 
 QCL ships with a built-in **GraalJS**-based script engine, letting server owners write logic in JavaScript and developers call scripts from the host (Java/Kotlin) and pass values both ways. This page covers the `com.qinhuai.corelib.script` package: the `QinhScriptBridge` facade, the context and result objects, the `qcl` / `ctx` callable from scripts, the reference syntax, return-value mapping, the sandbox, error codes, and how sub-plugins register their own script namespace.
 
-For a server-owner-oriented intro to writing scripts, see [../02-服主指南/脚本入门.md](../02-服主指南/脚本入门.md).
+For a server-owner-oriented intro to writing scripts, see [../02-服主指南/脚本入门.md](../02-server-guide/scripting-intro.md).
 
 ---
 
@@ -296,6 +296,6 @@ Once registered, referencing `<namespace>:xxx.js` looks for the script in your p
 
 ## 📚 Further reading
 
-- [经济API.md](经济API.md) — the full economy facade behind `qcl.economyHas/Withdraw/Deposit` in scripts.
-- [物品API.md](物品API.md) — the item facade behind `qcl.itemParse/itemGive`.
-- [../02-服主指南/脚本入门.md](../02-服主指南/脚本入门.md) — server-owner-oriented script writing.
+- [经济API.md](./economy-api.md) — the full economy facade behind `qcl.economyHas/Withdraw/Deposit` in scripts.
+- [物品API.md](./item-api.md) — the item facade behind `qcl.itemParse/itemGive`.
+- [../02-服主指南/脚本入门.md](../02-server-guide/scripting-intro.md) — server-owner-oriented script writing.

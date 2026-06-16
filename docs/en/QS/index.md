@@ -17,5 +17,5 @@ The item itself (in QI), attribute-number application (in the numbers backend).
 
 ## See also
 
-- How QI forwards skills: [QI · Cross-module Integration](../QI/04-开发者/跨模块对接.md)
-- Integration steps: [QI · Integration Howto](../QI/04-开发者/集成实操.md)
+- How QI forwards skills: [QI · Cross-module Integration](../QI/04-developer/cross-module-integration.md)
+- Integration steps: [QI · Integration Howto](../QI/04-developer/integration-howto.md)

@@ -1,5 +1,5 @@
-> Previous: [配置文件.md](配置文件.md) · Next: [GUI动作与条件速查.md](GUI动作与条件速查.md)
-> Related: [脚本入门.md](脚本入门.md) · [经济动作.md](经济动作.md) · [GUI编程API.md](../04-开发者/GUI编程API.md) · [FAQ.md](../05-参考/FAQ.md)
+> Previous: [配置文件.md](./config.md) · Next: [GUI动作与条件速查.md](./gui-actions-conditions.md)
+> Related: [脚本入门.md](./scripting-intro.md) · [经济动作.md](./economy-actions.md) · [GUI编程API.md](../04-developer/gui-api.md) · [FAQ.md](../05-reference/faq.md)
 
 # 🖼️ Custom GUI
 
@@ -159,7 +159,7 @@ title: "&ePlayers online: {online}"
   custom-model-data: 1001
 ```
 
-> 💡 The `item` field can take an item source reference (such as items from other Qinh modules) and supports `{placeholders}`. See [物品源引用.md](物品源引用.md) for details.
+> 💡 The `item` field can take an item source reference (such as items from other Qinh modules) and supports `{placeholders}`. See [物品源引用.md](./item-source-references.md) for details.
 
 ---
 
@@ -191,9 +191,9 @@ click-actions:
     value: "sell all {player}"
 ```
 
-> See **[GUI动作与条件速查.md](GUI动作与条件速查.md)** for the full list of action types with individual examples.
-> For the `value` syntax of economy-related actions (`give_money` / `take_money` / `set_money`), see **[经济动作.md](经济动作.md)**.
-> The `javascript` action lets you write arbitrary logic with scripts; see **[脚本入门.md](脚本入门.md)**.
+> See **[GUI动作与条件速查.md](./gui-actions-conditions.md)** for the full list of action types with individual examples.
+> For the `value` syntax of economy-related actions (`give_money` / `take_money` / `set_money`), see **[经济动作.md](./economy-actions.md)**.
+> The `javascript` action lets you write arbitrary logic with scripts; see **[脚本入门.md](./scripting-intro.md)**.
 
 ---
 
@@ -220,7 +220,7 @@ Add a `view-requirement` to an item, and **when the condition is not met, this s
       value: admin_panel
 ```
 
-> For the full list of condition types, comparison operators, `negate` usage, and examples, see **[GUI动作与条件速查.md](GUI动作与条件速查.md)**.
+> For the full list of condition types, comparison operators, `negate` usage, and examples, see **[GUI动作与条件速查.md](./gui-actions-conditions.md)**.
 
 ---
 
@@ -385,7 +385,7 @@ shop:
           value: main_menu
 ```
 
-> ⚠️ Multiple actions on the same slot (`buy`/`give`/`ok`) are **all executed in order**. Be sure to place the money deduction before giving the item; if you want "do nothing at all when there isn't enough money", note that `take_money` itself won't deduct when it fails, but `give_item` is still an independent action — for a more robust "conditional purchase", use a script: see [脚本入门.md](脚本入门.md) and the "Buy Button Recipe" on the reference page.
+> ⚠️ Multiple actions on the same slot (`buy`/`give`/`ok`) are **all executed in order**. Be sure to place the money deduction before giving the item; if you want "do nothing at all when there isn't enough money", note that `take_money` itself won't deduct when it fails, but `give_item` is still an independent action — for a more robust "conditional purchase", use a script: see [脚本入门.md](./scripting-intro.md) and the "Buy Button Recipe" on the reference page.
 
 ### Example 3: Online Player Pagination
 
@@ -417,8 +417,8 @@ online_list:
 ---
 
 ## 📖 Continue Reading
-- ➡️ [GUI动作与条件速查.md](GUI动作与条件速查.md) — Item-by-item examples of all click actions / visibility conditions
-- 💰 [经济动作.md](经济动作.md) — Full syntax for `give_money` / `take_money` / `set_money`
-- 📜 [脚本入门.md](脚本入门.md) — Write custom conditions and actions with `javascript`
-- 🧰 [GUI编程API.md](../04-开发者/GUI编程API.md) — For developers: register dynamic data sources from code
-- ❓ [FAQ.md](../05-参考/FAQ.md) — Frequently asked questions
+- ➡️ [GUI动作与条件速查.md](./gui-actions-conditions.md) — Item-by-item examples of all click actions / visibility conditions
+- 💰 [经济动作.md](./economy-actions.md) — Full syntax for `give_money` / `take_money` / `set_money`
+- 📜 [脚本入门.md](./scripting-intro.md) — Write custom conditions and actions with `javascript`
+- 🧰 [GUI编程API.md](../04-developer/gui-api.md) — For developers: register dynamic data sources from code
+- ❓ [FAQ.md](../05-reference/faq.md) — Frequently asked questions

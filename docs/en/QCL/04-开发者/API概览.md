@@ -1,5 +1,5 @@
-> Previous: [../03-外部插件对接/经济插件.md](../03-外部插件对接/经济插件.md)　·　Next: [物品API.md](物品API.md)
-> Related: [物品API.md](物品API.md) · [脚本API.md](脚本API.md) · [经济API.md](经济API.md) · [../03-外部插件对接/物品类插件.md](../03-外部插件对接/物品类插件.md) · [../05-参考/术语表.md](../05-参考/术语表.md)
+> Previous: [../03-外部插件对接/经济插件.md](../03-external-plugins/economy-plugins.md)　·　Next: [物品API.md](./item-api.md)
+> Related: [物品API.md](./item-api.md) · [脚本API.md](./script-api.md) · [经济API.md](./economy-api.md) · [../03-外部插件对接/物品类插件.md](../03-external-plugins/item-plugins.md) · [../05-参考/术语表.md](../05-reference/glossary.md)
 
 # 🧭 Developer API Overview
 
@@ -195,8 +195,8 @@ public void reward(Player player) {
 
 ## 📚 Further reading
 
-- [物品API.md](物品API.md) — full `ItemManagerAPI` methods, `ItemModule` implementation, Groovy external item modules, item metadata read/write.
-- [脚本API.md](脚本API.md) — `QinhScriptBridge` / `qcl` / `ctx`, calling scripts from the host and passing variables, the sandbox.
-- [经济API.md](经济API.md) — full `EconomyBridge` methods, differences between the three backends, error-code handling.
-- [../03-外部插件对接/物品类插件.md](../03-外部插件对接/物品类插件.md) — which external item plugins the unified item source connects to.
-- [../05-参考/术语表.md](../05-参考/术语表.md) — quick glossary.
+- [物品API.md](./item-api.md) — full `ItemManagerAPI` methods, `ItemModule` implementation, Groovy external item modules, item metadata read/write.
+- [脚本API.md](./script-api.md) — `QinhScriptBridge` / `qcl` / `ctx`, calling scripts from the host and passing variables, the sandbox.
+- [经济API.md](./economy-api.md) — full `EconomyBridge` methods, differences between the three backends, error-code handling.
+- [../03-外部插件对接/物品类插件.md](../03-external-plugins/item-plugins.md) — which external item plugins the unified item source connects to.
+- [../05-参考/术语表.md](../05-reference/glossary.md) — quick glossary.

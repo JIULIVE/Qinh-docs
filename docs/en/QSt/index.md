@@ -13,4 +13,4 @@
 ## For now
 
 - Series overview: [Qinh Series Docs](../index.md)
-- Item "layer" mechanism: [QI · Layers & Assembly](../QI/04-开发者/层与装配.md)
+- Item "layer" mechanism: [QI · Layers & Assembly](../QI/04-developer/layers-assembly.md)

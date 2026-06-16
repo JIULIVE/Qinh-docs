@@ -1,6 +1,6 @@
 # API Recipe Collection (Scenario-Based Code)
 
-> Belongs to: [Developers](API概览.md)　·　Related: [API Reference](API参考.md) · [Events](事件.md) · [Integration Hands-On](集成实操.md)
+> Belongs to: [Developers](./api-overview.md)　·　Related: [API Reference](./api-reference.md) · [Events](./events.md) · [Integration Hands-On](./integration-howto.md)
 
 Turn common third-party needs into **complete, ready-to-use code recipes**. Entry point `com.qinhuai.items.api.QinhItemsAPI`, Java uses `.INSTANCE`.
 
@@ -90,7 +90,7 @@ public ItemStack rollReward(java.util.Map<String, Integer> pool, java.util.Rando
 }
 ```
 
-> If you want to use QI's built-in random quality / affix generation, see the `RandomItemGenerator` in [Random Generation](../02-服主指南/随机生成.md).
+> If you want to use QI's built-in random quality / affix generation, see the `RandomItemGenerator` in [Random Generation](../02-server-guide/random-generation.md).
 
 ---
 
@@ -116,7 +116,7 @@ when (result) {
 }
 ```
 
-> ⚠️ Variable keys in a layer patch **cannot use attribute semantic names** (`attack_damage` and the like are rejected by the semantic red line). To add attributes, go through a [Provider](Provider与桥.md). Attributes should be expressed by your enhancement system via an AP source or the item template. For write-domain rules see [Layers and Assembly](层与装配.md#3-写域策略writedomainpolicy).
+> ⚠️ Variable keys in a layer patch **cannot use attribute semantic names** (`attack_damage` and the like are rejected by the semantic red line). To add attributes, go through a [Provider](./providers-bridges.md). Attributes should be expressed by your enhancement system via an AP source or the item template. For write-domain rules see [Layers and Assembly](./layers-assembly.md#3-写域策略writedomainpolicy).
 
 Read back a layer value:
 
@@ -145,7 +145,7 @@ Lock to prevent others from changing it:
 QinhItemsAPI.variables().lock(stack, "ui_highlight", owner = "ui_glow")
 ```
 
-For write results see [Variables](../02-服主指南/变量.md#7-开发者-api).
+For write results see [Variables](../02-server-guide/variables.md#7-开发者-api).
 
 ---
 
@@ -195,7 +195,7 @@ public void onUseCheck(QinhItemUseCheckEvent e) {
 }
 ```
 
-Configure it on the item like this: `options.restrictions: ["class:Warrior"]`. For the full event list see [Events](事件.md).
+Configure it on the item like this: `options.restrictions: ["class:Warrior"]`. For the full event list see [Events](./events.md).
 
 ---
 
@@ -228,7 +228,7 @@ QinhItemsAPI.actions().registerPayloadSchema("myplugin:teleport_home") {
 }
 ```
 
-Reference it in YAML: `- handler: myplugin:teleport_home / payload: "..."`. See [Action Handler Development](动作处理器开发.md) for details.
+Reference it in YAML: `- handler: myplugin:teleport_home / payload: "..."`. See [Action Handler Development](./handler-development.md) for details.
 
 ---
 
@@ -248,12 +248,12 @@ Reference it in YAML: `- handler: myplugin:teleport_home / payload: "..."`. See 
 | Get providers | `getProviders(item)` |
 | Refresh equipment attributes | `combat().refreshEquipmentAttributes` |
 
-For full signatures see [API Reference](API参考.md).
+For full signatures see [API Reference](./api-reference.md).
 
 ---
 
 ## Next steps
 
-- [API Reference](API参考.md): all method signatures
-- [Events](事件.md): lifecycle hooks you can listen to
-- [Integration Hands-On](集成实操.md): connecting external plugins
+- [API Reference](./api-reference.md): all method signatures
+- [Events](./events.md): lifecycle hooks you can listen to
+- [Integration Hands-On](./integration-howto.md): connecting external plugins

@@ -1,8 +1,8 @@
-> Related: [API概览.md](API概览.md) · [数据存储与占位符.md](数据存储与占位符.md) · [../02-服主指南/自定义GUI.md](../02-服主指南/自定义GUI.md) · [../05-参考/术语表.md](../05-参考/术语表.md)
+> Related: [API概览.md](./api-overview.md) · [数据存储与占位符.md](./data-placeholders.md) · [../02-服主指南/自定义GUI.md](../02-server-guide/custom-gui.md) · [../05-参考/术语表.md](../05-reference/glossary.md)
 
 # 🖼️ GUI Programming API (CustomGuiManager)
 
-This page covers **programmatic** GUI operations — opening / rendering / feeding data using Kotlin code. For the GUI **YAML fields** (layout, icons, click actions, etc.), see the server-owner doc [../02-服主指南/自定义GUI.md](../02-服主指南/自定义GUI.md); this page only covers the code side.
+This page covers **programmatic** GUI operations — opening / rendering / feeding data using Kotlin code. For the GUI **YAML fields** (layout, icons, click actions, etc.), see the server-owner doc [../02-服主指南/自定义GUI.md](../02-server-guide/custom-gui.md); this page only covers the code side.
 
 The core entry point is `CustomGuiManager`.
 
@@ -220,7 +220,7 @@ CustomGuiManager.openGui(player, "profile",
 
 ## 📖 Continue reading
 
-- [../02-服主指南/自定义GUI.md](../02-服主指南/自定义GUI.md) — GUI YAML fields and server-owner configuration
-- [数据存储与占位符.md](数据存储与占位符.md) — PapiBridge and %qcl_xxx% placeholders
-- [动作与技能桥.md](动作与技能桥.md) — the action system behind click actions
-- [../05-参考/术语表.md](../05-参考/术语表.md) — terminology definitions
+- [../02-服主指南/自定义GUI.md](../02-server-guide/custom-gui.md) — GUI YAML fields and server-owner configuration
+- [数据存储与占位符.md](./data-placeholders.md) — PapiBridge and %qcl_xxx% placeholders
+- [动作与技能桥.md](./actions-skill-bridge.md) — the action system behind click actions
+- [../05-参考/术语表.md](../05-reference/glossary.md) — terminology definitions

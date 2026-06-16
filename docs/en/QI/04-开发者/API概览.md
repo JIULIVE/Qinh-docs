@@ -1,8 +1,8 @@
 # API Overview & Integration
 
-> Belongs to: [Developer](API概览.md)　·　Subpages: [API Reference](API参考.md) · [Events](事件.md) · [Action Handler Development](动作处理器开发.md)
+> Belongs to: [Developer](./api-overview.md)　·　Subpages: [API Reference](./api-reference.md) · [Events](./events.md) · [Action Handler Development](./handler-development.md)
 
-This chapter is for plugin developers: how to depend on QI, where the entry point is, and how the API is layered. For full method signatures, see [API Reference](API参考.md).
+This chapter is for plugin developers: how to depend on QI, where the entry point is, and how the API is layered. For full method signatures, see [API Reference](./api-reference.md).
 
 ---
 
@@ -65,7 +65,7 @@ QI's API is split into several facades, accessed by responsibility:
 | Bridge | `QinhItemsAPI.bridge()` | Registering / querying Provider bridges |
 | Combat | `QinhItemsAPI.combat()` | Combat / attribute refresh (= `QinhCombatAPI`) |
 
-For full signatures, see [API Reference](API参考.md).
+For full signatures, see [API Reference](./api-reference.md).
 
 ---
 
@@ -118,18 +118,18 @@ QinhItemsAPI.actions().registerHandler(object : QinhActionHandler {
 
 | You want to… | Use | Section |
 |---|---|---|
-| Build items by ID, reverse-look-up item ownership | QI `assembly()` / `isQinhItem` | [API Reference](API参考.md) |
-| Resolve items via `qi:id` / `qinhitems:id` prefixes | CoreLib `ItemManagerAPI.getHookItem(ref)` | [Integration](集成.md) |
-| Attach external-system data to items | Provider + Bridge | [Provider & Bridge](Provider与桥.md) |
-| Custom logic after a trigger | Action handlers | [Action Handler Development](动作处理器开发.md) |
-| Listen to item lifecycle | Events | [Events](事件.md) |
-| Socketing / inlay / enhancement (state after modifying an item) | Layer API | [Layers & Assembly](层与装配.md) |
-| Ready-made code for markets / mail / lotteries / enhancement, etc. | — | [API Cookbook](API配方集.md) |
-| Integrate AP / QinhSkills / gem backends | — | [Integration in Practice](集成实操.md) |
+| Build items by ID, reverse-look-up item ownership | QI `assembly()` / `isQinhItem` | [API Reference](./api-reference.md) |
+| Resolve items via `qi:id` / `qinhitems:id` prefixes | CoreLib `ItemManagerAPI.getHookItem(ref)` | [Integration](./integration.md) |
+| Attach external-system data to items | Provider + Bridge | [Provider & Bridge](./providers-bridges.md) |
+| Custom logic after a trigger | Action handlers | [Action Handler Development](./handler-development.md) |
+| Listen to item lifecycle | Events | [Events](./events.md) |
+| Socketing / inlay / enhancement (state after modifying an item) | Layer API | [Layers & Assembly](./layers-assembly.md) |
+| Ready-made code for markets / mail / lotteries / enhancement, etc. | — | [API Cookbook](./api-recipes.md) |
+| Integrate AP / QinhSkills / gem backends | — | [Integration in Practice](./integration-howto.md) |
 
 ---
 
 ## Next Steps
 
-- [Full API Reference](API参考.md)
-- [Event Compendium](事件.md)
+- [Full API Reference](./api-reference.md)
+- [Event Compendium](./events.md)

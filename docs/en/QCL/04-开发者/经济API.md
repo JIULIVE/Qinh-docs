@@ -1,11 +1,11 @@
-> Previous: [脚本API.md](脚本API.md)　·　Next: [../05-参考/术语表.md](../05-参考/术语表.md)
-> Related: [API概览.md](API概览.md) · [脚本API.md](脚本API.md) · [../02-服主指南/经济动作.md](../02-服主指南/经济动作.md) · [../03-外部插件对接/经济插件.md](../03-外部插件对接/经济插件.md)
+> Previous: [脚本API.md](./script-api.md)　·　Next: [../05-参考/术语表.md](../05-reference/glossary.md)
+> Related: [API概览.md](./api-overview.md) · [脚本API.md](./script-api.md) · [../02-服主指南/经济动作.md](../02-server-guide/economy-actions.md) · [../03-外部插件对接/经济插件.md](../03-external-plugins/economy-plugins.md)
 
 # 💰 Economy API
 
 QCL uses **`EconomyBridge`** to flatten economy backends like Vault / ExcellentEconomy / PlayerPoints into a single unified set of calls. This page covers the `com.qinhuai.corelib.economy` package: all `EconomyBridge` methods, the `EconomyProvider` interface, `EconomyTransactionResult` and error codes, the differences between the three backends, `selectProvider`, `parseMoneyRequirement`, `EconomyActionParser` / `EconomyGuiActions`, plus call examples and best practices.
 
-For the server-admin-facing GUI economy action syntax see [../02-服主指南/经济动作.md](../02-服主指南/经济动作.md); for a detailed breakdown of backend integration differences see [../03-外部插件对接/经济插件.md](../03-外部插件对接/经济插件.md).
+For the server-admin-facing GUI economy action syntax see [../02-服主指南/经济动作.md](../02-server-guide/economy-actions.md); for a detailed breakdown of backend integration differences see [../03-外部插件对接/经济插件.md](../03-external-plugins/economy-plugins.md).
 
 ---
 
@@ -103,7 +103,7 @@ Construction helpers:
 | **ExcellentEconomy (EE)** | Multi-currency | ❌ Online only | **Must specify `currencyId`**, otherwise reports `CURRENCY_REQUIRED`; offline players cannot be operated on |
 | **PlayerPoints** | Points | ✅ Supports offline | Integer points; amounts are processed as integers |
 
-> See [../03-外部插件对接/经济插件.md](../03-外部插件对接/经济插件.md) for details.
+> See [../03-外部插件对接/经济插件.md](../03-external-plugins/economy-plugins.md) for details.
 
 ---
 
@@ -127,7 +127,7 @@ Syntax: `[provider:][currency:]<operator><amount>`. Used for "condition requires
 
 ### EconomyActionParser
 
-`EconomyActionParser.parse(value)` → `EconomyActionSpec(amount, providerId?, currencyId?, failMessage?)`, parses the value string in a GUI action into a structure (for the value syntax see [../02-服主指南/经济动作.md](../02-服主指南/经济动作.md)).
+`EconomyActionParser.parse(value)` → `EconomyActionSpec(amount, providerId?, currencyId?, failMessage?)`, parses the value string in a GUI action into a structure (for the value syntax see [../02-服主指南/经济动作.md](../02-server-guide/economy-actions.md)).
 
 ```kotlin
 val spec = EconomyActionParser.parse("excellenteconomy:gold:500")
@@ -215,7 +215,7 @@ if (provider != null && provider.isAvailable()) {
 
 ## 📚 Further Reading
 
-- [../02-服主指南/经济动作.md](../02-服主指南/经济动作.md) —— the value syntax for `give_money` / `take_money` / `set_money` in GUIs.
-- [../03-外部插件对接/经济插件.md](../03-外部插件对接/经济插件.md) —— integration details and differences for Vault / EE / PlayerPoints.
-- [脚本API.md](脚本API.md) —— `qcl.economyHas/Withdraw/Deposit` in scripts.
-- [../05-参考/术语表.md](../05-参考/术语表.md) —— quick term reference.
+- [../02-服主指南/经济动作.md](../02-server-guide/economy-actions.md) —— the value syntax for `give_money` / `take_money` / `set_money` in GUIs.
+- [../03-外部插件对接/经济插件.md](../03-external-plugins/economy-plugins.md) —— integration details and differences for Vault / EE / PlayerPoints.
+- [脚本API.md](./script-api.md) —— `qcl.economyHas/Withdraw/Deposit` in scripts.
+- [../05-参考/术语表.md](../05-reference/glossary.md) —— quick term reference.

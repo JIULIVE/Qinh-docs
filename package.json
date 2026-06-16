@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "gen": "node scripts/gen-section-pages.mjs",
+    "predev": "node scripts/gen-section-pages.mjs",
+    "prebuild": "node scripts/gen-section-pages.mjs",
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs"

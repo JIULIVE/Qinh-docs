@@ -1,6 +1,6 @@
 # Complete API Reference (QinhItemsAPI + facades)
 
-> Belongs to: [Developers](API概览.md)　·　Related: [API Overview](API概览.md) · [Events](事件.md)
+> Belongs to: [Developers](./api-overview.md)　·　Related: [API Overview](./api-overview.md) · [Events](./events.md)
 
 `com.qinhuai.items.api.QinhItemsAPI` (Kotlin object). Java calls use `.INSTANCE`. The signatures below are written in Kotlin style.
 
@@ -60,7 +60,7 @@ fun removeLayer(item: ItemStack, layerId: String): ItemStack
 
 > Deprecated: `readLayer` / `writeLayer` (use `readLayerPack` / `applyLayerPatch` instead).
 
-For the layer mechanism see [Layers and Assembly](层与装配.md). `LayerWriteResult`: `OK` / `NOT_QINH_ITEM` / `DOMAIN_VIOLATION` / `PROVIDER_PATCH_FORBIDDEN`.
+For the layer mechanism see [Layers and Assembly](./layers-assembly.md). `LayerWriteResult`: `OK` / `NOT_QINH_ITEM` / `DOMAIN_VIOLATION` / `PROVIDER_PATCH_FORBIDDEN`.
 
 ---
 
@@ -76,7 +76,7 @@ fun unlock(item, key, owner): Boolean
 fun refresh(item: ItemStack): ItemStack?
 ```
 
-`InstanceWriteResult`: `OK` / `NOT_QINH_ITEM` / `LOCKED_BY_OTHER` / `DOMAIN_VIOLATION`. See [Variables](../02-服主指南/变量.md#7-开发者-api) for details.
+`InstanceWriteResult`: `OK` / `NOT_QINH_ITEM` / `LOCKED_BY_OTHER` / `DOMAIN_VIOLATION`. See [Variables](../02-server-guide/variables.md#7-开发者-api) for details.
 
 ---
 
@@ -95,7 +95,7 @@ fun payloadSchema(handlerId: String): PayloadSchema?
 fun hasPayloadSchema(handlerId: String): Boolean
 ```
 
-See [Action Handler Development](动作处理器开发.md) for details.
+See [Action Handler Development](./handler-development.md) for details.
 
 ---
 
@@ -125,7 +125,7 @@ fun registerBridgeHook(id: String, hook: QinhBridgeHook)
 fun parseProviders(snapshot: ProviderSnapshot): Map<String, BridgeParseResult>
 ```
 
-See [Provider and Bridge](Provider与桥.md) for details.
+See [Provider and Bridge](./providers-bridges.md) for details.
 
 ---
 
@@ -139,7 +139,7 @@ fun activeAttributeBackend(): AttributeBackend
 fun refreshEquipmentAttributes(player: Player): Int
 ```
 
-See [Attributes and Values](../02-服主指南/属性与数值.md#8-开发者读属性) for details.
+See [Attributes and Values](../02-server-guide/attributes-numbers.md#8-开发者读属性) for details.
 
 ---
 
@@ -165,7 +165,7 @@ typealias ProviderSnapshot / BridgeParseResult / QinhItemCompiledEvent
 
 ### QinhItemDefinition (excerpt)
 
-Item template. For the full field table see [Item Definition](../02-服主指南/物品定义.md#2-顶层字段总表).
+Item template. For the full field table see [Item Definition](../02-server-guide/item-definition.md#2-顶层字段总表).
 
 ### QinhItemInstanceData
 
@@ -217,6 +217,6 @@ if (reward != null) buyer.getInventory().addItem(reward);
 
 ## Next step
 
-- [Event Catalog](事件.md)
-- [Provider and Bridge](Provider与桥.md)
-- [Layers and Assembly](层与装配.md)
+- [Event Catalog](./events.md)
+- [Provider and Bridge](./providers-bridges.md)
+- [Layers and Assembly](./layers-assembly.md)

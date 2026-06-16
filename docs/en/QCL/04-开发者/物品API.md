@@ -1,11 +1,11 @@
-> Previous: [API概览.md](API概览.md)　·　Next: [脚本API.md](脚本API.md)
-> Related: [API概览.md](API概览.md) · [脚本API.md](脚本API.md) · [../02-服主指南/物品源引用.md](../02-服主指南/物品源引用.md) · [../03-外部插件对接/物品类插件.md](../03-外部插件对接/物品类插件.md)
+> Previous: [API概览.md](./api-overview.md)　·　Next: [脚本API.md](./script-api.md)
+> Related: [API概览.md](./api-overview.md) · [脚本API.md](./script-api.md) · [../02-服主指南/物品源引用.md](../02-server-guide/item-source-references.md) · [../03-外部插件对接/物品类插件.md](../03-external-plugins/item-plugins.md)
 
 # 🗡️ Item API
 
 This page covers the `com.qinhuai.corelib.api.item` package in depth: how to use **`ItemManagerAPI`** for unified item fetching, register your own item module, write external item modules in **Groovy** (no plugin compilation needed), read/write item PDC metadata, and an introduction to the semantic layer `SemanticSpec`.
 
-For the reference string syntax (`source:itemID`, JSON parameters, etc.) see [../02-服主指南/物品源引用.md](../02-服主指南/物品源引用.md); for which external plugins the unified item source hooks into, see [../03-外部插件对接/物品类插件.md](../03-外部插件对接/物品类插件.md).
+For the reference string syntax (`source:itemID`, JSON parameters, etc.) see [../02-服主指南/物品源引用.md](../02-server-guide/item-source-references.md); for which external plugins the unified item source hooks into, see [../03-外部插件对接/物品类插件.md](../03-external-plugins/item-plugins.md).
 
 ---
 
@@ -246,7 +246,7 @@ println(parsed.itemId)     // excalibur
 println(parsed.paramsJson) // {"tier":3}
 ```
 
-For the full reference syntax (separators, JSON parameters, vanilla material fallback, etc.) see [../02-服主指南/物品源引用.md](../02-服主指南/物品源引用.md).
+For the full reference syntax (separators, JSON parameters, vanilla material fallback, etc.) see [../02-服主指南/物品源引用.md](../02-server-guide/item-source-references.md).
 
 ---
 
@@ -309,7 +309,7 @@ SemanticSpecRegistry.all().forEach { println(it.qualifiedId) }
 
 ## 📚 Further reading
 
-- [脚本API.md](脚本API.md) —— scripts can also use `qcl.itemParse` / `qcl.itemGive` to fetch items.
-- [经济API.md](经济API.md) —— pair with item fetching to charge fees and grant rewards.
-- [../02-服主指南/物品源引用.md](../02-服主指南/物品源引用.md) —— full reference string syntax.
-- [../03-外部插件对接/物品类插件.md](../03-外部插件对接/物品类插件.md) —— which external item sources are hooked in by default.
+- [脚本API.md](./script-api.md) —— scripts can also use `qcl.itemParse` / `qcl.itemGive` to fetch items.
+- [经济API.md](./economy-api.md) —— pair with item fetching to charge fees and grant rewards.
+- [../02-服主指南/物品源引用.md](../02-server-guide/item-source-references.md) —— full reference string syntax.
+- [../03-外部插件对接/物品类插件.md](../03-external-plugins/item-plugins.md) —— which external item sources are hooked in by default.

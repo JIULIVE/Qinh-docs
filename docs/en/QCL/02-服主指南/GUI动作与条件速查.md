@@ -1,9 +1,9 @@
-> Previous: [自定义GUI.md](自定义GUI.md) · Next: [经济动作.md](经济动作.md)
-> Related: [脚本入门.md](脚本入门.md) · [经济动作.md](经济动作.md) · [GUI编程API.md](../04-开发者/GUI编程API.md)
+> Previous: [自定义GUI.md](./custom-gui.md) · Next: [经济动作.md](./economy-actions.md)
+> Related: [脚本入门.md](./scripting-intro.md) · [经济动作.md](./economy-actions.md) · [GUI编程API.md](../04-developer/gui-api.md)
 
 # 🔎 GUI Actions & Conditions Quick Reference
 
-This is a **pure quick-reference page**: all click actions (`type`) and all visibility conditions (`view-requirement`), each with a copy-paste-ready YAML snippet. For the basic GUI structure, read [自定义GUI.md](自定义GUI.md) first.
+This is a **pure quick-reference page**: all click actions (`type`) and all visibility conditions (`view-requirement`), each with a copy-paste-ready YAML snippet. For the basic GUI structure, read [自定义GUI.md](./custom-gui.md) first.
 
 ---
 
@@ -31,9 +31,9 @@ This is a **pure quick-reference page**: all click actions (`type`) and all visi
 | `gamemode` | — | `SURVIVAL`/`CREATIVE`/`ADVENTURE`/`SPECTATOR` | Change game mode |
 | `fly` | — | `true`/`false`/empty (toggle) | Toggle flight |
 | `effect` | — | `effectName,durationTicks,level` | Apply potion effect |
-| `give_money` | `givemoney` | see [经济动作.md](经济动作.md) | Give money |
-| `take_money` | `takemoney`,`remove_money` | see [经济动作.md](经济动作.md) | Take money |
-| `set_money` | `setmoney` | see [经济动作.md](经济动作.md) | Set balance |
+| `give_money` | `givemoney` | see [经济动作.md](./economy-actions.md) | Give money |
+| `take_money` | `takemoney`,`remove_money` | see [经济动作.md](./economy-actions.md) | Take money |
+| `set_money` | `setmoney` | see [经济动作.md](./economy-actions.md) | Set balance |
 | `javascript` | `js`,`run_script`,`script` | script reference or code | Run JS |
 
 ### 📋 Example for Each
@@ -125,7 +125,7 @@ js:
   value: "myscript.js"
 ```
 
-> 💰 The three economy actions `give_money` / `take_money` / `set_money` have a more complex value syntax (including provider, currency, failure message), documented separately in **[经济动作.md](经济动作.md)**.
+> 💰 The three economy actions `give_money` / `take_money` / `set_money` have a more complex value syntax (including provider, currency, failure message), documented separately in **[经济动作.md](./economy-actions.md)**.
 
 ---
 
@@ -152,7 +152,7 @@ click-actions:
     value: "&7Any click works"
 ```
 
-> You can also add `shift: true`, meaning the action only triggers on "Shift + click" (see [自定义GUI.md](自定义GUI.md)).
+> You can also add `shift: true`, meaning the action only triggers on "Shift + click" (see [自定义GUI.md](./custom-gui.md)).
 
 ---
 
@@ -269,7 +269,7 @@ view-requirement:
       value: "&aPurchase successful, 100 coins deducted"
 ```
 
-> ⚠️ The three actions above run in order. If you want an **atomic transaction** like "don't give the item if taking money fails", use a `javascript` action instead and write both the deduction and the item grant in a single script — see [脚本入门.md](脚本入门.md).
+> ⚠️ The three actions above run in order. If you want an **atomic transaction** like "don't give the item if taking money fails", use a `javascript` action instead and write both the deduction and the item grant in a single script — see [脚本入门.md](./scripting-intro.md).
 
 ### Recipe B: Admin-only button (permission)
 
@@ -321,7 +321,7 @@ view-requirement:
 ---
 
 ## 📖 Further Reading
-- 🖼️ [自定义GUI.md](自定义GUI.md) — Full GUI structure and fields
-- 💰 [经济动作.md](经济动作.md) — value syntax for the three economy actions
-- 📜 [脚本入门.md](脚本入门.md) — `javascript` conditions and actions
-- 🧰 [GUI编程API.md](../04-开发者/GUI编程API.md) — Developer extension actions and data sources
+- 🖼️ [自定义GUI.md](./custom-gui.md) — Full GUI structure and fields
+- 💰 [经济动作.md](./economy-actions.md) — value syntax for the three economy actions
+- 📜 [脚本入门.md](./scripting-intro.md) — `javascript` conditions and actions
+- 🧰 [GUI编程API.md](../04-developer/gui-api.md) — Developer extension actions and data sources
