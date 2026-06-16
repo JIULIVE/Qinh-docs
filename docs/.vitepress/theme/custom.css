@@ -1,0 +1,23 @@
+/* ── 让顶栏 / 侧边栏 / 正文都顶到左边（去掉宽屏下整体居中留出的左右空白） ── */
+:root {
+  --vp-layout-max-width: 100%;
+}
+
+/* 顶栏内容也靠左 */
+.VPNavBar .container,
+.VPNavBar .content {
+  max-width: 100% !important;
+}
+
+/* 宽屏下给正文一个可读上限并靠左排版，右侧自然留白（参考站观感） */
+@media (min-width: 1440px) {
+  .VPDoc.has-sidebar .content {
+    max-width: 1180px;
+    margin: 0;
+  }
+}
+
+/* 侧边栏每行图标与文字间距更舒服一点 */
+.VPSidebarItem .text {
+  white-space: normal;
+}
