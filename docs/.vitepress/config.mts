@@ -29,6 +29,11 @@ const DIR_SLUG: Record<string, string> = {
   'QCL/03-外部插件对接': 'QCL/03-external-plugins',
   'QCL/04-开发者': 'QCL/04-developer',
   'QCL/05-参考': 'QCL/05-reference',
+  'QS/01-入门': 'QS/01-getting-started',
+  'QS/02-对接': 'QS/02-integration',
+  'QS/03-服主指南': 'QS/03-server-guide',
+  'QS/04-开发者': 'QS/04-developer',
+  'QS/05-参考': 'QS/05-reference',
 }
 const dirSlug = (sec: any): string => DIR_SLUG[sec.dir] ?? sec.dir
 const leafSlug = (sec: any, leaf: any): string => `${dirSlug(sec)}/${slugify(leaf[1])}`
@@ -52,11 +57,10 @@ function pluginSidebar(p: any, lang: 'zh' | 'en'): DefaultTheme.SidebarItem[] {
 
 // 生成 中文源路径 → 英文 URL 的 rewrites（含每个分节总览页 index 与每个叶子页）。
 function buildRewrites(): Record<string, string> {
-  const rw: Record<string, string> = {
-    'zh-Hans/QI/README.md': 'zh-Hans/QI/index.md',
-    'zh-Hans/QCL/README.md': 'zh-Hans/QCL/index.md',
-    'en/QI/README.md': 'en/QI/index.md',
-    'en/QCL/README.md': 'en/QCL/index.md',
+  const rw: Record<string, string> = {}
+  // 每个完整插件的 README 当落地页，映射成 index。
+  for (const p of PLUGINS) {
+    for (const L of ['zh-Hans', 'en']) rw[`${L}/${p.key}/README.md`] = `${L}/${p.key}/index.md`
   }
   for (const p of PLUGINS) {
     for (const sec of p.sections) {
@@ -85,8 +89,7 @@ function sidebar(lang: 'zh' | 'en'): DefaultTheme.Sidebar {
 function nav(lang: 'zh' | 'en'): DefaultTheme.NavItem[] {
   const base = baseOf(lang)
   const all = [
-    { key: 'QCL', name: 'QinhCoreLib' },
-    { key: 'QI', name: 'QinhItems' },
+    ...PLUGINS.map((p) => ({ key: p.key, name: p.name })),
     ...STUBS.map((s) => ({ key: s.key, name: s.name })),
   ]
   return all.map((p) => ({ text: p.name, link: base + p.key + '/', activeMatch: base + p.key + '/' }))

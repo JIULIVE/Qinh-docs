@@ -22,6 +22,11 @@ const DIR_SLUG = {
   'QCL/03-外部插件对接': 'QCL/03-external-plugins',
   'QCL/04-开发者': 'QCL/04-developer',
   'QCL/05-参考': 'QCL/05-reference',
+  'QS/01-入门': 'QS/01-getting-started',
+  'QS/02-对接': 'QS/02-integration',
+  'QS/03-服主指南': 'QS/03-server-guide',
+  'QS/04-开发者': 'QS/04-developer',
+  'QS/05-参考': 'QS/05-reference',
 }
 
 // 中文源路径(无 locale、无 .md) → 英文输出路径

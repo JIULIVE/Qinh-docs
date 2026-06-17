@@ -189,11 +189,88 @@ export const QCL = {
   ],
 }
 
-// QCL（底座）排首位，其次 QI
-export const PLUGINS = [QCL, QI]
+export const QS = {
+  key: 'QS',
+  name: 'QinhSkills',
+  icon: '✨',
+  sections: [
+    {
+      zh: '入门', en: 'Getting Started', icon: '📖', dir: 'QS/01-入门',
+      descZh: '认识技能引擎 QinhSkills：它在生态里负责什么、如何安装、5 分钟造出第一个能放的技能，以及整条运行管线。',
+      descEn: 'Meet QinhSkills, the skill engine — what it owns in the ecosystem, how to install, your first castable skill in 5 minutes, and the full runtime pipeline.',
+      items: [
+        ['概览：QS 是什么', 'Overview', 'QS/01-入门/概览', '🧭'],
+        ['安装与环境', 'Installation', 'QS/01-入门/安装', '📥'],
+        ['5 分钟快速上手', 'Quick Start', 'QS/01-入门/快速上手', '🚀'],
+        ['核心概念与运行管线', 'Core Concepts', 'QS/01-入门/核心概念', '🧩'],
+      ],
+    },
+    {
+      zh: '对接', en: 'Integration', icon: '🔌', dir: 'QS/02-对接',
+      descZh: '最关键的一节：QS 插在「物品按键」与「MythicMobs 表现」之间，本节讲清三种接法、分工铁律与从按键到放出技能的执行链路。',
+      descEn: 'The most important section — QS sits between item input and MythicMobs execution. The three integration paths, the division-of-labor rule, and the full cast flow from keypress to skill.',
+      items: [
+        ['对接总览：三种接法', 'Integration Overview', 'QS/02-对接/对接总览', '🗺️'],
+        ['对接 QinhItems（原生 handler）', 'QinhItems Integration', 'QS/02-对接/对接QinhItems', '⚔️'],
+        ['对接 MythicMobs（执行后端）', 'MythicMobs Integration', 'QS/02-对接/对接MythicMobs', '🐲'],
+        ['对接其他物品插件', 'Other Item Plugins', 'QS/02-对接/对接其他物品插件', '🎒'],
+        ['执行链路与事件', 'Cast Flow & Events', 'QS/02-对接/执行链路与事件', '🔗'],
+      ],
+    },
+    {
+      zh: '服主指南', en: 'Server Guide', icon: '📦', dir: 'QS/03-服主指南',
+      descZh: '用 YAML 配技能的完整指南：文件结构、全字段、graph 连招、触发器、被动、索敌、冷却充能、吟唱、消耗条件变量与脚本。',
+      descEn: 'The complete guide to authoring skills in YAML — file structure, every field, graph combos, triggers, passives, targeting, cooldown & charges, channeling, cost/condition/variables, and scripting.',
+      items: [
+        ['技能文件结构', 'Skill File Structure', 'QS/03-服主指南/技能文件结构', '🗂️'],
+        ['技能定义全字段', 'Skill Definition Fields', 'QS/03-服主指南/技能定义全字段', '📝'],
+        ['graph 图与连招', 'Graph & Combos', 'QS/03-服主指南/graph与连招', '🔀'],
+        ['触发器', 'Triggers', 'QS/03-服主指南/触发器', '🎯'],
+        ['被动技能', 'Passive Skills', 'QS/03-服主指南/被动技能', '🛡️'],
+        ['目标与索敌', 'Targeting', 'QS/03-服主指南/目标与索敌', '🔭'],
+        ['冷却/充能/GCD/冲突', 'Cooldown, Charges, GCD & Conflicts', 'QS/03-服主指南/冷却充能GCD与冲突', '⏱️'],
+        ['施法模式与吟唱', 'Cast Modes & Channeling', 'QS/03-服主指南/施法模式与吟唱', '🪄'],
+        ['消耗/条件/变量', 'Cost, Conditions & Variables', 'QS/03-服主指南/消耗条件与变量', '💧'],
+        ['脚本（pre_js / post_js）', 'Scripting', 'QS/03-服主指南/脚本', '📜'],
+        ['config.yml 全配置', 'Config', 'QS/03-服主指南/配置文件', '⚙️'],
+      ],
+    },
+    {
+      zh: '开发者', en: 'Developer', icon: '💻', dir: 'QS/04-开发者',
+      descZh: '面向开发者：QinhSkillsAPI、QISkillUseEvent 事件、占位符、脚本 API、诊断协议与玩家数据存储。',
+      descEn: 'For developers — QinhSkillsAPI, the QISkillUseEvent, placeholders, the script API, diagnostic protocol, and player data storage.',
+      items: [
+        ['QinhSkillsAPI', 'API', 'QS/04-开发者/API', '📘'],
+        ['事件 QISkillUseEvent', 'Events', 'QS/04-开发者/事件', '📡'],
+        ['PlaceholderAPI 占位符', 'Placeholders', 'QS/04-开发者/占位符', '🔣'],
+        ['脚本 API', 'Script API', 'QS/04-开发者/脚本API', '🧪'],
+        ['诊断与协议', 'Diagnostics & Protocol', 'QS/04-开发者/诊断与协议', '🩺'],
+        ['数据存储', 'Data Storage', 'QS/04-开发者/数据存储', '🗄️'],
+      ],
+    },
+    {
+      zh: '参考手册', en: 'Reference', icon: '📚', dir: 'QS/05-参考',
+      descZh: '速查区：命令权限、玩家消息文案、结果码、内置技能示例、排错、性能限流、FAQ、术语表与更新日志。',
+      descEn: 'Quick reference — commands & permissions, player messages, result codes, bundled skill examples, troubleshooting, performance & throttling, FAQ, glossary, and changelog.',
+      items: [
+        ['命令与权限', 'Commands & Permissions', 'QS/05-参考/命令与权限', '⌨️'],
+        ['消息文案速查', 'Messages', 'QS/05-参考/消息文案速查', '💬'],
+        ['结果码 CastResult', 'CastResult Codes', 'QS/05-参考/结果码CastResult', '🔢'],
+        ['内置技能与示例', 'Bundled Skills & Examples', 'QS/05-参考/内置技能与示例', '📋'],
+        ['诊断与排错', 'Troubleshooting', 'QS/05-参考/诊断排错', '🚑'],
+        ['性能与被动限流', 'Performance & Throttling', 'QS/05-参考/性能与限流', '📈'],
+        ['FAQ 常见问题', 'FAQ', 'QS/05-参考/FAQ', '❓'],
+        ['术语表', 'Glossary', 'QS/05-参考/术语表', '📖'],
+        ['更新日志', 'Changelog', 'QS/05-参考/更新日志', '📅'],
+      ],
+    },
+  ],
+}
+
+// QCL（底座）排首位，其次 QI、QS
+export const PLUGINS = [QCL, QI, QS]
 
 export const STUBS = [
-  { key: 'QS', name: 'QinhSkills', icon: '✨' },
   { key: 'QC', name: 'QinhClass', icon: '🎓' },
   { key: 'QSt', name: 'QinhStrengthen', icon: '🔨' },
   { key: 'QF', name: 'QinhForge', icon: '⚒️' },
