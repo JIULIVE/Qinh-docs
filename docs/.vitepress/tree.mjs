@@ -137,6 +137,7 @@ export const QCL = {
       descEn: 'Configuration & features — config.yml, commands & permissions, item-source references, custom GUI, economy actions, scripting, and custom blocks.',
       items: [
         ['config.yml 全配置', 'Config', 'QCL/02-服主指南/配置文件', '🛠️'],
+        ['属性系统', 'Attribute System', 'QCL/02-服主指南/属性系统', '🗡️'],
         ['命令与权限', 'Commands & Permissions', 'QCL/02-服主指南/命令与权限', '⌨️'],
         ['物品源引用语法', 'Item-Source References', 'QCL/02-服主指南/物品源引用', '🔗'],
         ['自定义 GUI', 'Custom GUI', 'QCL/02-服主指南/自定义GUI', '🖼️'],
