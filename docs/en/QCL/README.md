@@ -27,8 +27,6 @@ The docs are organized by **reader role**. First decide who you are, then enter 
 | 🩺 **Errors / abnormal status** | [Diagnostics & Troubleshooting](./02-server-guide/diagnostics.md) · [FAQ](./05-reference/faq.md) | Line-by-line reading of `/qcl status`, health codes, common pitfalls |
 | 📚 **Look up terms / quick reference** | [Glossary](./05-reference/glossary.md) | "module", "bridge", "item source", "Provider", "Handler"… |
 
-For full chapter navigation, see **[SUMMARY.md (table of contents tree)](README.md)**.
-
 ---
 
 ## ✨ Core capabilities at a glance
