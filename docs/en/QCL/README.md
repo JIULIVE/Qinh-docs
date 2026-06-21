@@ -59,8 +59,6 @@ The docs are organized by **reader role**. First decide who you are, then enter 
 
 ## 📌 Documentation conventions
 
-- Tokens of the form `qcl.status`, `ItemManagerAPI`, `economy.default-provider`, `mm-龙剑` are **code identifiers / config keys / reference syntax** — copy them verbatim, **they are case-sensitive**.
-- Paragraphs of the form `🖼️ [Image placeholder]` are **spots left for you to add images later**, with a suggested filename already noted (place it in the `assets/` directory).
-- Chinese text inside code blocks is **comments / explanation**; keep the key names in English for what actually gets written into YAML.
+- Tokens of the form `qcl.status`, `ItemManagerAPI`, `economy.default-provider`, `mm-龙剑` are **code identifiers / config keys / reference syntax** — copy them verbatim, **they are case-sensitive**.- Chinese text inside code blocks is **comments / explanation**; keep the key names in English for what actually gets written into YAML.
 - All YAML / file paths are by default relative to `plugins/QinhCoreLib/`.
 - This documentation is written against source **1.2.0** and aligned with code behavior; if your actual version differs, defer to `/qcl status` and the console log.
