@@ -10,7 +10,7 @@ QinhCoreLib (hereafter **QCL**) is the **foundation** of the entire Qinhuai RPG 
 
 In one sentence: **install QCL first, and only then can the other Qinh modules run; at the same time QCL is itself a ready-to-use server-owner toolkit and developer SDK.**
 
-> 🖼️ **[Image placeholder]** An in-game screenshot showing the `/qcl status` diagnostic output (platform / modules / bridges all green)　·　suggested `/img/qcl/status-overview.png`
+<p align="center"><img src="/img/qcl/status-overview_en.png" alt="/qcl status diagnostic output" width="640" /></p>
 
 ---
 
