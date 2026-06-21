@@ -2,7 +2,7 @@
 
 > **The core foundation of the Qinhuai ecosystem** — a unified platform library built for Paper / Purpur / Spigot **1.21.11+** and **Java 25+**.
 >
-> Current version: **1.1.0**　·　Main class: `com.qinhuai.corelib.QinhCoreLib`　·　Hard dependency: **none** (it is the one others depend on)
+> Current version: **1.2.0**　·　Main class: `com.qinhuai.corelib.QinhCoreLib`　·　Hard dependency: **none** (it is the one others depend on)
 
 ---
 
@@ -65,4 +65,4 @@ For full chapter navigation, see **[SUMMARY.md (table of contents tree)](README.
 - Paragraphs of the form `🖼️ [Image placeholder]` are **spots left for you to add images later**, with a suggested filename already noted (place it in the `assets/` directory).
 - Chinese text inside code blocks is **comments / explanation**; keep the key names in English for what actually gets written into YAML.
 - All YAML / file paths are by default relative to `plugins/QinhCoreLib/`.
-- This documentation is written against source **1.1.0** and aligned with code behavior; if your actual version differs, defer to `/qcl status` and the console log.
+- This documentation is written against source **1.2.0** and aligned with code behavior; if your actual version differs, defer to `/qcl status` and the console log.
