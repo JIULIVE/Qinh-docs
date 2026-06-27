@@ -80,7 +80,9 @@ nodes:
 | 节点 `require_state` | `state.required` | 一致 |
 | 节点 `triggers` | `trigger.primary` | triggers 要**包含** primary |
 
-> 💡 99% 的简单技能，graph 就这样一个节点，写完几乎不用再碰。
+::: tip 提示
+💡 99% 的简单技能，graph 就这样一个节点，写完几乎不用再碰。
+:::
 
 ---
 
@@ -102,7 +104,9 @@ nodes:
 | ② | 只要 trigger 命中 | 状态对不上时的兜底 |
 | ③ | 都不命中 | 总有入口节点保底，不会"按了没反应" |
 
-> 💡 **第 ① 步是连招能成立的核心。** 同一个右键，在 `IDLE` 命中起手节点，在 `COMBO_WINDOW` 命中续段节点——靠的就是 `require_state` 不同。
+::: tip 提示
+💡 **第 ① 步是连招能成立的核心。** 同一个右键，在 `IDLE` 命中起手节点，在 `COMBO_WINDOW` 命中续段节点——靠的就是 `require_state` 不同。
+:::
 
 ---
 
@@ -242,7 +246,9 @@ combos:
 | 2 | 右键 | `COMBO_WINDOW` | ① RIGHT_CLICK 命中 + 状态 COMBO_WINDOW → `fire_combo_chain` | 续段 | `fire_combo_strike` | 刷新窗口，保持 COMBO_WINDOW |
 | 3 | 左键 | `COMBO_WINDOW` | 最近输入 = [右,右,左] == `inputs` 且在 `window_ms` 内 → 触发 `finalize_skill` | 终结 `fire_combo_blaze` | `fire_combo_blaze` | 连招完成 → 回 IDLE |
 
-> 💡 第 3 步，QS 不是简单"左键命中哪个节点"，而是 `ComboResolver` 发现**最近三个输入恰好凑成 `[RIGHT_CLICK, RIGHT_CLICK, LEFT_CLICK]`**，直接放出 `finalize_skill` 指向的 `fire_combo_blaze` 节点。
+::: tip 提示
+💡 第 3 步，QS 不是简单"左键命中哪个节点"，而是 `ComboResolver` 发现**最近三个输入恰好凑成 `[RIGHT_CLICK, RIGHT_CLICK, LEFT_CLICK]`**，直接放出 `finalize_skill` 指向的 `fire_combo_blaze` 节点。
+:::
 
 **如果中途超时呢？** 第 1 步右键后，超过 `window_ms`（这里 1500ms）没按出第 2 下 → 状态回 `IDLE`，连招断，下一次右键又从起手重新开始。
 

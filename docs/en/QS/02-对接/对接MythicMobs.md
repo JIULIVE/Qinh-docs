@@ -135,7 +135,9 @@ QS calls MM through `MythicExecutor` (which under the hood uses `MythicBukkit`'s
 | **Did not configure** `target:` | **No** `@Target` | `@EntitiesInRadius{r=4}` / `@Self` — **grab a range yourself** |
 | Passive skill | The attacker etc. is passed in as `@Trigger` / `@Target` | `@Trigger` / `@Target` |
 
-> ⚠️ The most common newbie pitfall: the MM skill uses `@Target`, but the QS skill didn't configure `target:` — so MM can't find a target and the skill "fires into nothing." **If you didn't configure `target:`, use `@EntitiesInRadius` / `@Self`.**
+::: warning Caution
+⚠️ The most common newbie pitfall: the MM skill uses `@Target`, but the QS skill didn't configure `target:` — so MM can't find a target and the skill "fires into nothing." **If you didn't configure `target:`, use `@EntitiesInRadius` / `@Self`.**
+:::
 
 ### 5.2 Variables: read them in MM with `<skill.var.name>`
 
@@ -154,10 +156,12 @@ QS injects these variables, which the MM YAML reads with `<skill.var.NAME>` (the
 
 > Numbers are automatically converted to MM **numeric variables** (usable in math); everything else is a string. This lets you use `<skill.var.power>` to do per-level scaling in MM (the damage is ultimately handed to AP, but you can use it to scale presentation like particle count, range, etc.).
 
-> ⚠️ **Two high-frequency misconceptions (be sure to commit to memory):**
-> 1. **The player name is `<skill.var.playerName>`, not `<skill.var.player>`.** There is no `player` variable on the MM side.
-> 2. **The MM side cannot get the skill level `level`.** Level exists only in the script `ctx` (`ctx.get("level")`). To scale by level in MM, pass a parameter in the QS skill's `levels.N.params:` (e.g. `power: "1.2"`), and read it in MM with `<skill.var.power>`.
-> 3. This MM variable-name set (parameters with **no** `var_` prefix, using `playerName`) and the **script** `ctx` set (parameters **with** the `var_` prefix, using `player`, having `level`) are **two different sets** — don't mix them. For the mapping see [Script API](../04-developer/script-api.md).
+::: warning Caution
+⚠️ **Two high-frequency misconceptions (be sure to commit to memory):**
+1. **The player name is `<skill.var.playerName>`, not `<skill.var.player>`.** There is no `player` variable on the MM side.
+2. **The MM side cannot get the skill level `level`.** Level exists only in the script `ctx` (`ctx.get("level")`). To scale by level in MM, pass a parameter in the QS skill's `levels.N.params:` (e.g. `power: "1.2"`), and read it in MM with `<skill.var.power>`.
+3. This MM variable-name set (parameters with **no** `var_` prefix, using `playerName`) and the **script** `ctx` set (parameters **with** the `var_` prefix, using `player`, having `level`) are **two different sets** — don't mix them. For the mapping see [Script API](../04-developer/script-api.md).
+:::
 
 ---
 

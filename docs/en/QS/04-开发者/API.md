@@ -17,7 +17,9 @@ QS works just like QI: the QS runtime is already installed on the server, so you
 softdepend: [QinhSkills]
 ```
 
-> ⚠️ Some `QinhSkillsAPI` signatures reference types from `QinhCoreLib` (e.g. the `QISkillUseEvent` event, `TriggerType`). If compilation reports missing `com.qinhuai.corelib.*`, also install-file **QinhCoreLib** and reference it as `provided`.
+::: warning Caution
+⚠️ Some `QinhSkillsAPI` signatures reference types from `QinhCoreLib` (e.g. the `QISkillUseEvent` event, `TriggerType`). If compilation reports missing `com.qinhuai.corelib.*`, also install-file **QinhCoreLib** and reference it as `provided`.
+:::
 
 ### Availability check (soft fail)
 
@@ -66,7 +68,9 @@ Every method accepts either a **skill id** or a **QI payload** (JSON / plain str
 | `isSilenced(player)` | `Boolean` | Whether currently silenced/locked out (state machine LOCKED) |
 | `unsilence(player)` | — | Lifts silence immediately |
 
-> 📌 `unlock` / `lock` / `setLevel` / `setSlot` all **write to disk** (`PlayerProfileStore.save`). Watch the frequency when batch-calling across many players; see [Data Storage](./data-storage.md).
+::: info Note
+📌 `unlock` / `lock` / `setLevel` / `setSlot` all **write to disk** (`PlayerProfileStore.save`). Watch the frequency when batch-calling across many players; see [Data Storage](./data-storage.md).
+:::
 
 ---
 

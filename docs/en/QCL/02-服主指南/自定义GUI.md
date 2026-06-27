@@ -18,7 +18,9 @@ This page teaches you how to build clickable menus (GUIs) for your server **pure
 | Open command | `/qcl gui <id>` |
 | Reload command | `/qcl reload` (reloads all GUIs) |
 
-> 💡 A single `.yml` file can contain multiple top-level keys, which is equivalent to defining multiple menus in one file. GUI IDs are unique server-wide — **don't reuse names** across different files.
+::: tip Tip
+💡 A single `.yml` file can contain multiple top-level keys, which is equivalent to defining multiple menus in one file. GUI IDs are unique server-wide — **don't reuse names** across different files.
+:::
 
 Minimal example (file `plugins/QinhCoreLib/guis/menu.yml`):
 
@@ -93,8 +95,10 @@ shop:
       action: "close"
 ```
 
-> ⚠️ In layout mode, an item's `material`/`name`/`lore` and similar fields must be written under the `display:` **child node**.
-> 💡 `icons` support shorthand action strings: `action` (any click), `action_left` (left click), `action_right` (right click), in the format `type: value`. For complex actions, it's still recommended to use `click-actions` under `display:` (see below).
+::: warning Caution
+⚠️ In layout mode, an item's `material`/`name`/`lore` and similar fields must be written under the `display:` **child node**.
+💡 `icons` support shorthand action strings: `action` (any click), `action_left` (left click), `action_right` (right click), in the format `type: value`. For complex actions, it's still recommended to use `click-actions` under `display:` (see below).
+:::
 
 ---
 
@@ -159,7 +163,9 @@ title: "&ePlayers online: {online}"
   custom-model-data: 1001
 ```
 
-> 💡 The `item` field can take an item source reference (such as items from other Qinh modules) and supports `{placeholders}`. See [物品源引用.md](./item-source-references.md) for details.
+::: tip Tip
+💡 The `item` field can take an item source reference (such as items from other Qinh modules) and supports `{placeholders}`. See [物品源引用.md](./item-source-references.md) for details.
+:::
 
 ---
 
@@ -385,7 +391,9 @@ shop:
           value: main_menu
 ```
 
-> ⚠️ Multiple actions on the same slot (`buy`/`give`/`ok`) are **all executed in order**. Be sure to place the money deduction before giving the item; if you want "do nothing at all when there isn't enough money", note that `take_money` itself won't deduct when it fails, but `give_item` is still an independent action — for a more robust "conditional purchase", use a script: see [脚本入门.md](./scripting-intro.md) and the "Buy Button Recipe" on the reference page.
+::: warning Caution
+⚠️ Multiple actions on the same slot (`buy`/`give`/`ok`) are **all executed in order**. Be sure to place the money deduction before giving the item; if you want "do nothing at all when there isn't enough money", note that `take_money` itself won't deduct when it fails, but `give_item` is still an independent action — for a more robust "conditional purchase", use a script: see [脚本入门.md](./scripting-intro.md) and the "Buy Button Recipe" on the reference page.
+:::
 
 ### Example 3: Online Player Pagination
 

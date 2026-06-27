@@ -268,12 +268,90 @@ export const QS = {
   ],
 }
 
-// QCL（底座）排首位，其次 QI、QS
-export const PLUGINS = [QCL, QI, QS]
+export const QR = {
+  key: 'QR',
+  name: 'QinhRuins',
+  icon: '🏛️',
+  sections: [
+    {
+      zh: '入门', en: 'Getting Started', icon: '📖', dir: 'QR/01-入门',
+      descZh: '认识程序化秘境引擎 QinhRuins：它解决什么问题、如何安装、5 分钟造出第一座会自然生成的遗迹，以及整体架构。',
+      descEn: 'Meet QinhRuins, the procedural ruin engine — what it solves, how to install, your first self-generating ruin in 5 minutes, and the overall architecture.',
+      items: [
+        ['概览：QR 是什么', 'Overview', 'QR/01-入门/概览', '🧭'],
+        ['安装与环境', 'Installation', 'QR/01-入门/安装', '📥'],
+        ['5 分钟快速上手', 'Quick Start', 'QR/01-入门/快速上手', '🚀'],
+        ['核心概念与架构', 'Core Concepts', 'QR/01-入门/核心概念', '🧩'],
+      ],
+    },
+    {
+      zh: '服主指南', en: 'Server Guide', icon: '📦', dir: 'QR/02-服主指南',
+      descZh: '面向服主的配置大全：遗迹模板、结构融合、蓝图玩法、机关、放置与生成、秘境词缀、战利品与玩家体验。',
+      descEn: "The server owner's complete guide — ruin templates, structure blending, blueprint gameplay, mechanisms, placement & generation, realms & affixes, loot, and player experience.",
+      items: [
+        ['服主指南总览', 'Server Guide Overview', 'QR/02-服主指南/概览', '🧭'],
+        ['遗迹模板', 'Ruin Template', 'QR/02-服主指南/遗迹模板', '📝'],
+        ['结构文件', 'Structure Files', 'QR/02-服主指南/结构文件', '🧱'],
+        ['选区与保存', 'Selection & Save', 'QR/02-服主指南/选区与保存', '✂️'],
+        ['蓝图与目标', 'Blueprint & Objectives', 'QR/02-服主指南/蓝图与目标', '📐'],
+        ['刷怪与通关', 'Spawning & Clearing', 'QR/02-服主指南/刷怪与通关', '⚔️'],
+        ['机关系统', 'Mechanisms', 'QR/02-服主指南/机关系统', '🎚️'],
+        ['放置档案', 'Placement Profiles', 'QR/02-服主指南/放置档案', '🗺️'],
+        ['自然生成与预加载', 'Generation & Preloading', 'QR/02-服主指南/自然生成与预加载', '🌍'],
+        ['程序化生成', 'Procedural Generation', 'QR/02-服主指南/程序化生成', '🏗️'],
+        ['秘境与钥石', 'Realms & Keystones', 'QR/02-服主指南/秘境与钥石', '🏆'],
+        ['词缀系统', 'Affixes', 'QR/02-服主指南/词缀系统', '🏷️'],
+        ['战利品系统', 'Loot Tables', 'QR/02-服主指南/战利品系统', '💰'],
+        ['向导与图鉴', 'Guide & Codex', 'QR/02-服主指南/向导与图鉴', '🧭'],
+        ['组队与会话', 'Party & Sessions', 'QR/02-服主指南/组队与会话', '👥'],
+      ],
+    },
+    {
+      zh: '可视化编辑器', en: 'Visual Editor', icon: '🎮', dir: 'QR/03-编辑器',
+      descZh: '不写 YAML，站在世界里框选、标刷怪点 / 宝箱 / 核心、配机关，一键存成遗迹模板。',
+      descEn: 'No YAML — stand in the world, select a region, mark spawns / chests / cores, configure mechanisms, and save a ruin template in one click.',
+      items: [
+        ['编辑器概览', 'Editor Overview', 'QR/03-编辑器/概览', '🧭'],
+        ['可视化建迹', 'Visual Building', 'QR/03-编辑器/可视化建迹', '🪄'],
+        ['机关编辑', 'Mechanism Editing', 'QR/03-编辑器/机关编辑', '🎚️'],
+      ],
+    },
+    {
+      zh: '开发者', en: 'Developer', icon: '💻', dir: 'QR/04-开发者',
+      descZh: '面向开发者：QinhRuinsAPI、生命周期事件、词缀脚本、Provider 桥、占位符与数据存储。',
+      descEn: 'For developers — QinhRuinsAPI, lifecycle events, affix scripting, provider bridges, placeholders, and data storage.',
+      items: [
+        ['QinhRuinsAPI', 'API', 'QR/04-开发者/API', '📘'],
+        ['事件大全', 'Events', 'QR/04-开发者/事件', '📡'],
+        ['词缀脚本', 'Affix Scripting', 'QR/04-开发者/脚本', '📜'],
+        ['Provider 与桥接', 'Providers & Bridges', 'QR/04-开发者/Provider桥', '🌉'],
+        ['PlaceholderAPI 占位符', 'Placeholders', 'QR/04-开发者/占位符', '🔣'],
+        ['数据存储', 'Data Storage', 'QR/04-开发者/数据存储', '🗄️'],
+      ],
+    },
+    {
+      zh: '参考手册', en: 'Reference', icon: '📚', dir: 'QR/05-参考',
+      descZh: '速查区：命令、权限、config.yml、内置内容清单、资源文件、诊断排错、FAQ 与术语表。',
+      descEn: 'Quick reference — commands, permissions, config.yml, bundled content, resource files, troubleshooting, FAQ, and glossary.',
+      items: [
+        ['命令大全', 'Commands', 'QR/05-参考/命令', '⌨️'],
+        ['权限节点', 'Permissions', 'QR/05-参考/权限', '🔑'],
+        ['config.yml 全配置', 'Config', 'QR/05-参考/配置文件', '⚙️'],
+        ['内置内容清单', 'Bundled Content', 'QR/05-参考/内置内容清单', '📋'],
+        ['资源文件总览', 'Resource Files', 'QR/05-参考/资源文件总览', '🗃️'],
+        ['诊断与排错', 'Troubleshooting', 'QR/05-参考/诊断排错', '🚑'],
+        ['FAQ', 'FAQ', 'QR/05-参考/FAQ', '❓'],
+        ['术语表', 'Glossary', 'QR/05-参考/术语表', '📖'],
+      ],
+    },
+  ],
+}
+
+// QCL（底座）排首位，其次 QI、QS、QR
+export const PLUGINS = [QCL, QI, QS, QR]
 
 export const STUBS = [
   { key: 'QC', name: 'QinhClass', icon: '🎓' },
   { key: 'QSt', name: 'QinhStrengthen', icon: '🔨' },
   { key: 'QF', name: 'QinhForge', icon: '⚒️' },
-  { key: 'QR', name: 'QinhRuins', icon: '🏛️' },
 ]

@@ -21,3 +21,24 @@
 .VPSidebarItem .text {
   white-space: normal;
 }
+
+/* ── 提示框（callout / custom-block）轻度美化 ── */
+/* 颜色沿用 VitePress 语义色：tip 绿 / warning 黄 / danger 红 / info 中性。
+   只做克制的打磨：圆角、左侧色条、标题更清晰，不改正文与代码块背景。 */
+.vp-doc .custom-block {
+  border-radius: 8px;
+  border-width: 1px;
+  border-left-width: 4px;
+  padding: 14px 16px;
+}
+.vp-doc .custom-block .custom-block-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.vp-doc .custom-block p + p {
+  margin: 6px 0 0;
+}
+/* 提示框里的行内代码不要再叠一层突兀底色，跟随块体语义色更协调 */
+.vp-doc .custom-block :not(pre) > code {
+  background-color: var(--vp-c-default-soft);
+}

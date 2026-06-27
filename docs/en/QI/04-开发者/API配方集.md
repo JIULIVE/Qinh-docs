@@ -116,7 +116,9 @@ when (result) {
 }
 ```
 
-> ⚠️ Variable keys in a layer patch **cannot use attribute semantic names** (`attack_damage` and the like are rejected by the semantic red line). To add attributes, go through a [Provider](./providers-bridges.md). Attributes should be expressed by your enhancement system via an AP source or the item template. For write-domain rules see [Layers and Assembly](./layers-assembly.md#3-写域策略writedomainpolicy).
+::: warning Caution
+⚠️ Variable keys in a layer patch **cannot use attribute semantic names** (`attack_damage` and the like are rejected by the semantic red line). To add attributes, go through a [Provider](./providers-bridges.md). Attributes should be expressed by your enhancement system via an AP source or the item template. For write-domain rules see [Layers and Assembly](./layers-assembly.md#3-写域策略writedomainpolicy).
+:::
 
 Read back a layer value:
 

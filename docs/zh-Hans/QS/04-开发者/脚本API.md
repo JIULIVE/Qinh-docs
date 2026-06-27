@@ -69,9 +69,11 @@ qinhskills:路径.js[:函数名]
 | `target_uuid` | 目标 UUID 字符串 | 仅锁到目标时 |
 | `var_<名>` | **技能变量**，如 `var_element`、`var_power` | 每个 `variables:` / `levels.params:` 键各一个 |
 
-> ⚠️ **不存在的键**：`skillId`、`castMode`、`targetCount`、`slot`、`param_<名>` 都**没有**。技能变量和等级参数**统一**用 `var_` 前缀（不是 `param_`）：YAML 的 `variables.element` 与 `levels.N.params.power` → 脚本里 `ctx.get("var_element")`、`ctx.get("var_power")`。
->
-> 📌 这套 `ctx` 键名只适用于**脚本**。技能透传给 **MythicMobs** 的变量是另一套（`<skill.var.playerName>`、参数不带 `var_` 前缀、且 MM 侧拿不到 `level`），见 [消耗条件与变量](../03-server-guide/cost-conditions-variables.md) 与 [对接 MythicMobs](../02-integration/mythicmobs-integration.md)。
+::: warning 注意
+⚠️ **不存在的键**：`skillId`、`castMode`、`targetCount`、`slot`、`param_<名>` 都**没有**。技能变量和等级参数**统一**用 `var_` 前缀（不是 `param_`）：YAML 的 `variables.element` 与 `levels.N.params.power` → 脚本里 `ctx.get("var_element")`、`ctx.get("var_power")`。
+
+📌 这套 `ctx` 键名只适用于**脚本**。技能透传给 **MythicMobs** 的变量是另一套（`<skill.var.playerName>`、参数不带 `var_` 前缀、且 MM 侧拿不到 `level`），见 [消耗条件与变量](../03-server-guide/cost-conditions-variables.md) 与 [对接 MythicMobs](../02-integration/mythicmobs-integration.md)。
+:::
 
 ---
 
@@ -86,7 +88,9 @@ qinhskills:路径.js[:函数名]
 | `qcl.economy*(...)` | 经济相关（存取/查询等，按 QCL 版本提供） |
 | `qcl.runSync(runnable)` | 把逻辑切回主线程执行（操作世界/实体务必用它） |
 
-> ⚠️ 脚本可能在异步语境调用。**任何动世界/实体的操作都要包进 `qcl.runSync { ... }`**，否则可能抛线程异常。
+::: warning 注意
+⚠️ 脚本可能在异步语境调用。**任何动世界/实体的操作都要包进 `qcl.runSync { ... }`**，否则可能抛线程异常。
+:::
 
 ---
 

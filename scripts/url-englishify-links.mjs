@@ -27,6 +27,11 @@ const DIR_SLUG = {
   'QS/03-服主指南': 'QS/03-server-guide',
   'QS/04-开发者': 'QS/04-developer',
   'QS/05-参考': 'QS/05-reference',
+  'QR/01-入门': 'QR/01-getting-started',
+  'QR/02-服主指南': 'QR/02-server-guide',
+  'QR/03-编辑器': 'QR/03-editor',
+  'QR/04-开发者': 'QR/04-developer',
+  'QR/05-参考': 'QR/05-reference',
 }
 
 // 中文源路径(无 locale、无 .md) → 英文输出路径

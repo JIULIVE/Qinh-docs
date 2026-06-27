@@ -65,9 +65,11 @@ The **trigger atoms** available on a QI item are a one-to-one concept with `trig
 | `shift_right_click` | Sneak + right-click | `SHIFT_RIGHT_CLICK` |
 | `shift_toggle` | Sneak toggle (common for toggle skills) | `SHIFT_TOGGLE` |
 
-> 💡 **Best practice: make the item atom match the skill's `trigger.primary`.** For example, if the skill `dash` is configured with `trigger.primary: SHIFT_RIGHT_CLICK`, then trigger it from the item with `shift_right_click`.
->
-> What happens if they **don't match**? QS won't error — it will **fall back to the skill's entry node**, and the skill still casts; it's just that combos / branches may not reach the path you expected. So "even if they don't match it still casts, but it's best to match them."
+::: tip Tip
+💡 **Best practice: make the item atom match the skill's `trigger.primary`.** For example, if the skill `dash` is configured with `trigger.primary: SHIFT_RIGHT_CLICK`, then trigger it from the item with `shift_right_click`.
+
+What happens if they **don't match**? QS won't error — it will **fall back to the skill's entry node**, and the skill still casts; it's just that combos / branches may not reach the path you expected. So "even if they don't match it still casts, but it's best to match them."
+:::
 
 > 🖼️ **[Image placeholder]** Illustration of the five atoms' player actions (left-click / right-click / sneak combos / toggle)　·　suggested `assets/qi-atom-triggers.png`
 
@@ -91,7 +93,9 @@ Keys recognized by the JSON form:
 | `source` | Optional | Trigger source marker (e.g. `qinhitems`); passed to MM as a variable |
 | `context.mode` | Optional | Trigger mode (e.g. `LEFT_CLICK`) |
 
-> 📌 Which form to choose? For everyday use, **① the plain skill id** is enough. Use **③ JSON** only when you want MM to read `source` / `mode` for branching.
+::: info Note
+📌 Which form to choose? For everyday use, **① the plain skill id** is enough. Use **③ JSON** only when you want MM to read `source` / `mode` for branching.
+:::
 
 ---
 

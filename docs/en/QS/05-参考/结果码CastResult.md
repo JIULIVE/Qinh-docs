@@ -31,7 +31,9 @@ The enum has **14 values**. The table below covers the meaning, what the player 
 | `NO_TARGET` | Targeting `required: true` but no target locked | `§cNo usable target` | Aim at a target; loosen `range` / `filter` or set `required: false` |
 | `SILENCED` | Silenced by `/qs silence` or the API | `§cSkill silenced, cannot cast` | Wait for the silence to end or release with `/qs silence 0 player` |
 
-> ⚠️ The 14 values in the table match the source `CastResult.kt` strictly, including order. The source is authoritative for the text — if a hint you see doesn't match here, first confirm the plugin version is **1.0.22**.
+::: warning Caution
+⚠️ The 14 values in the table match the source `CastResult.kt` strictly, including order. The source is authoritative for the text — if a hint you see doesn't match here, first confirm the plugin version is **1.0.22**.
+:::
 
 ---
 

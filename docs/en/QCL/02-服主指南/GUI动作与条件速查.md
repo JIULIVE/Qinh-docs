@@ -269,7 +269,9 @@ view-requirement:
       value: "&aPurchase successful, 100 coins deducted"
 ```
 
-> ⚠️ The three actions above run in order. If you want an **atomic transaction** like "don't give the item if taking money fails", use a `javascript` action instead and write both the deduction and the item grant in a single script — see [脚本入门.md](./scripting-intro.md).
+::: warning Caution
+⚠️ The three actions above run in order. If you want an **atomic transaction** like "don't give the item if taking money fails", use a `javascript` action instead and write both the deduction and the item grant in a single script — see [脚本入门.md](./scripting-intro.md).
+:::
 
 ### Recipe B: Admin-only button (permission)
 

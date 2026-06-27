@@ -18,7 +18,9 @@
 | 打开命令 | `/qcl gui <id>` |
 | 重载命令 | `/qcl reload`（重载全部 GUI） |
 
-> 💡 一个 `.yml` 文件里可以写多个顶级 key，等于在一个文件里定义多个菜单。GUI ID 全服唯一，不同文件里**别重名**。
+::: tip 提示
+💡 一个 `.yml` 文件里可以写多个顶级 key，等于在一个文件里定义多个菜单。GUI ID 全服唯一，不同文件里**别重名**。
+:::
 
 最小例子（文件 `plugins/QinhCoreLib/guis/menu.yml`）：
 
@@ -93,8 +95,10 @@ shop:
       action: "close"
 ```
 
-> ⚠️ 布局模式下，物品的 `material`/`name`/`lore` 等字段必须写在 `display:` **子节点**里。
-> 💡 `icons` 里支持简写动作字符串：`action`（任意点击）、`action_left`（左键）、`action_right`（右键），格式 `类型: 值`。复杂动作仍建议用 `display:` 下的 `click-actions`（见下）。
+::: warning 注意
+⚠️ 布局模式下，物品的 `material`/`name`/`lore` 等字段必须写在 `display:` **子节点**里。
+💡 `icons` 里支持简写动作字符串：`action`（任意点击）、`action_left`（左键）、`action_right`（右键），格式 `类型: 值`。复杂动作仍建议用 `display:` 下的 `click-actions`（见下）。
+:::
 
 ---
 
@@ -159,7 +163,9 @@ title: "&e在线人数：{online}"
   custom-model-data: 1001
 ```
 
-> 💡 `item` 字段可填物品源引用（如其它 Qinh 模块的物品），并支持 `{占位符}`，详见 [物品源引用.md](./item-source-references.md)。
+::: tip 提示
+💡 `item` 字段可填物品源引用（如其它 Qinh 模块的物品），并支持 `{占位符}`，详见 [物品源引用.md](./item-source-references.md)。
+:::
 
 ---
 
@@ -385,7 +391,9 @@ shop:
           value: main_menu
 ```
 
-> ⚠️ 同一格上的多条动作（`buy`/`give`/`ok`）会**按顺序全部执行**。务必把扣钱放在给物品之前；若想做「钱不够则整体不执行」，可在 `take_money` 失败时它本身就不会再扣，但 `give_item` 仍是独立动作——更稳妥的「条件式购买」请用脚本，见 [脚本入门.md](./scripting-intro.md) 与速查页的「购买按钮配方」。
+::: warning 注意
+⚠️ 同一格上的多条动作（`buy`/`give`/`ok`）会**按顺序全部执行**。务必把扣钱放在给物品之前；若想做「钱不够则整体不执行」，可在 `take_money` 失败时它本身就不会再扣，但 `give_item` 仍是独立动作——更稳妥的「条件式购买」请用脚本，见 [脚本入门.md](./scripting-intro.md) 与速查页的「购买按钮配方」。
+:::
 
 ### 示例 3：在线玩家分页
 

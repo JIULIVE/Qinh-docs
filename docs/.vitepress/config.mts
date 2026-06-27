@@ -34,6 +34,11 @@ const DIR_SLUG: Record<string, string> = {
   'QS/03-服主指南': 'QS/03-server-guide',
   'QS/04-开发者': 'QS/04-developer',
   'QS/05-参考': 'QS/05-reference',
+  'QR/01-入门': 'QR/01-getting-started',
+  'QR/02-服主指南': 'QR/02-server-guide',
+  'QR/03-编辑器': 'QR/03-editor',
+  'QR/04-开发者': 'QR/04-developer',
+  'QR/05-参考': 'QR/05-reference',
 }
 const dirSlug = (sec: any): string => DIR_SLUG[sec.dir] ?? sec.dir
 const leafSlug = (sec: any, leaf: any): string => `${dirSlug(sec)}/${slugify(leaf[1])}`

@@ -116,7 +116,9 @@ when (result) {
 }
 ```
 
-> ⚠️ 层补丁的变量键**不能用属性语义名**（`attack_damage` 等会被语义红线拒绝）。要加属性走 [Provider](./providers-bridges.md)。属性应由你的强化系统通过 AP 源或物品模板表达。写域规则见 [层与装配](./layers-assembly.md#3-写域策略writedomainpolicy)。
+::: warning 注意
+⚠️ 层补丁的变量键**不能用属性语义名**（`attack_damage` 等会被语义红线拒绝）。要加属性走 [Provider](./providers-bridges.md)。属性应由你的强化系统通过 AP 源或物品模板表达。写域规则见 [层与装配](./layers-assembly.md#3-写域策略writedomainpolicy)。
+:::
 
 读回层值：
 

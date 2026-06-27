@@ -80,7 +80,9 @@ It must line up with the skill file `fire_wave.yml`:
 | node `require_state` | `state.required` | Identical |
 | node `triggers` | `trigger.primary` | triggers must **include** primary |
 
-> 💡 For 99% of simple skills, the graph is just this one node—once written you'll barely touch it again.
+::: tip Tip
+💡 For 99% of simple skills, the graph is just this one node—once written you'll barely touch it again.
+:::
 
 ---
 
@@ -102,7 +104,9 @@ When a player presses a key, how does QS decide which node to take? The rule is 
 | ② | trigger matches only | Fallback when state doesn't line up |
 | ③ | nothing matches | The entry node is always the safety net, so a key press never goes unanswered |
 
-> 💡 **Step ① is the core of what makes combos work.** The same right-click hits the opener node in `IDLE` and the chain node in `COMBO_WINDOW`—the only difference is `require_state`.
+::: tip Tip
+💡 **Step ① is the core of what makes combos work.** The same right-click hits the opener node in `IDLE` and the chain node in `COMBO_WINDOW`—the only difference is `require_state`.
+:::
 
 ---
 
@@ -242,7 +246,9 @@ Follow this table once and combos will be perfectly clear:
 | 2 | Right-click | `COMBO_WINDOW` | ① RIGHT_CLICK matches + state COMBO_WINDOW → `fire_combo_chain` | chain | `fire_combo_strike` | window refreshed, stays in COMBO_WINDOW |
 | 3 | Left-click | `COMBO_WINDOW` | recent inputs = [R, R, L] == `inputs` and within `window_ms` → trigger `finalize_skill` | finisher `fire_combo_blaze` | `fire_combo_blaze` | combo complete → back to IDLE |
 
-> 💡 In step 3, QS isn't simply asking "which node does left-click hit"; instead `ComboResolver` notices that **the last three inputs exactly form `[RIGHT_CLICK, RIGHT_CLICK, LEFT_CLICK]`** and directly casts the `fire_combo_blaze` node that `finalize_skill` points to.
+::: tip Tip
+💡 In step 3, QS isn't simply asking "which node does left-click hit"; instead `ComboResolver` notices that **the last three inputs exactly form `[RIGHT_CLICK, RIGHT_CLICK, LEFT_CLICK]`** and directly casts the `fire_combo_blaze` node that `finalize_skill` points to.
+:::
 
 **What if it times out mid-way?** After the right-click in step 1, if `window_ms` (1500ms here) passes without the second press → the state returns to `IDLE`, the combo breaks, and the next right-click starts fresh from the opener.
 

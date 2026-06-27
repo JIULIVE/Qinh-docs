@@ -69,9 +69,11 @@ The source assembles `scriptVars` with `buildMap` (`SkillCastService.executeReso
 | `target_uuid` | Target UUID string | Only when a target is locked |
 | `var_<name>` | **Skill variables**, e.g. `var_element`, `var_power` | One per `variables:` / `levels.params:` key |
 
-> ⚠️ **Keys that don't exist**: `skillId`, `castMode`, `targetCount`, `slot`, `param_<name>` are all **absent**. Skill variables and level params **uniformly** use the `var_` prefix (not `param_`): YAML's `variables.element` and `levels.N.params.power` → `ctx.get("var_element")`, `ctx.get("var_power")` in the script.
->
-> 📌 This `ctx` key set applies only to **scripts**. The variables a skill passes through to **MythicMobs** are a different set (`<skill.var.playerName>`, params without the `var_` prefix, and MM can't get `level`); see [Costs, Conditions & Variables](../03-server-guide/cost-conditions-variables.md) and [Integrating MythicMobs](../02-integration/mythicmobs-integration.md).
+::: warning Caution
+⚠️ **Keys that don't exist**: `skillId`, `castMode`, `targetCount`, `slot`, `param_<name>` are all **absent**. Skill variables and level params **uniformly** use the `var_` prefix (not `param_`): YAML's `variables.element` and `levels.N.params.power` → `ctx.get("var_element")`, `ctx.get("var_power")` in the script.
+
+📌 This `ctx` key set applies only to **scripts**. The variables a skill passes through to **MythicMobs** are a different set (`<skill.var.playerName>`, params without the `var_` prefix, and MM can't get `level`); see [Costs, Conditions & Variables](../03-server-guide/cost-conditions-variables.md) and [Integrating MythicMobs](../02-integration/mythicmobs-integration.md).
+:::
 
 ---
 
@@ -86,7 +88,9 @@ From QCL, a unified cross-plugin utility facade:
 | `qcl.economy*(...)` | Economy-related (deposit/withdraw/query, etc., depending on the QCL version) |
 | `qcl.runSync(runnable)` | Switches the logic back to the main thread (always use it for world/entity operations) |
 
-> ⚠️ Scripts may be invoked in an async context. **Wrap any operation that touches the world/entities in `qcl.runSync { ... }`**, otherwise it may throw a threading exception.
+::: warning Caution
+⚠️ Scripts may be invoked in an async context. **Wrap any operation that touches the world/entities in `qcl.runSync { ... }`**, otherwise it may throw a threading exception.
+:::
 
 ---
 

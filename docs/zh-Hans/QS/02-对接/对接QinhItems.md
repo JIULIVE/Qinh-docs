@@ -65,9 +65,11 @@ QI 物品上能用的**触发原子（atom）**，和 QS 技能里的 `trigger.p
 | `shift_right_click` | 潜行 + 右键 | `SHIFT_RIGHT_CLICK` |
 | `shift_toggle` | 潜行切换（开关技常用） | `SHIFT_TOGGLE` |
 
-> 💡 **最佳实践：让物品 atom 和技能的 `trigger.primary` 对上。** 比如技能 `dash` 配的是 `trigger.primary: SHIFT_RIGHT_CLICK`，那物品就用 `shift_right_click` 触发它。
->
-> 如果**对不上**会怎样？QS 不会报错——它会**回退到技能的入口节点**，技能仍然能放，只是连招 / 分支可能走不到你预期的那条。所以「对不上仍能放，但最好对上」。
+::: tip 提示
+💡 **最佳实践：让物品 atom 和技能的 `trigger.primary` 对上。** 比如技能 `dash` 配的是 `trigger.primary: SHIFT_RIGHT_CLICK`，那物品就用 `shift_right_click` 触发它。
+
+如果**对不上**会怎样？QS 不会报错——它会**回退到技能的入口节点**，技能仍然能放，只是连招 / 分支可能走不到你预期的那条。所以「对不上仍能放，但最好对上」。
+:::
 
 > 🖼️ **[图片占位]** 五种 atom 对应的玩家操作示意（左键 / 右键 / 潜行组合 / 切换）　·　建议 `assets/qi-atom-triggers.png`
 
@@ -91,7 +93,9 @@ JSON 写法识别的键：
 | `source` | 可选 | 触发来源标记（如 `qinhitems`），会作为变量传给 MM |
 | `context.mode` | 可选 | 触发模式（如 `LEFT_CLICK`） |
 
-> 📌 三种写法选哪个？日常用 **① 纯技能 id** 就够了。要让 MM 那边能读到 `source` / `mode` 做分支时，才用 ③ JSON。
+::: info 说明
+📌 三种写法选哪个？日常用 **① 纯技能 id** 就够了。要让 MM 那边能读到 `source` / `mode` 做分支时，才用 ③ JSON。
+:::
 
 ---
 

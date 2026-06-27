@@ -269,7 +269,9 @@ view-requirement:
       value: "&a购买成功，已扣除 100 金币"
 ```
 
-> ⚠️ 上面三条动作按顺序执行。若想做到「扣钱失败就不发物品」这种**原子事务**，请改用 `javascript` 动作把扣钱与发物品写在一个脚本里，见 [脚本入门.md](./scripting-intro.md)。
+::: warning 注意
+⚠️ 上面三条动作按顺序执行。若想做到「扣钱失败就不发物品」这种**原子事务**，请改用 `javascript` 动作把扣钱与发物品写在一个脚本里，见 [脚本入门.md](./scripting-intro.md)。
+:::
 
 ### 配方 B：管理员专属按钮（permission）
 

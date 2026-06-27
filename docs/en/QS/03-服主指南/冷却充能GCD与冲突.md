@@ -159,7 +159,9 @@ Casting a skill must pass through three sections of checks: **the three gates be
 | request validation | Request legitimacy validation failed | `SCRIPT_BLOCKED` |
 | execution (MM) | MythicMobs skill returned `false` | `MYTHIC_FAILED` |
 
-> 💡 The order means: silence / resolution / target are checked first, and MM execution is the final fallback. So a silenced player won't even have unlock or cooldown calculated; an unlocked skill won't even have its cooldown calculated. The GCD gate is inside `gate.check`, but if this skill has `gcd.ignore: true` it's skipped.
+::: tip Tip
+💡 The order means: silence / resolution / target are checked first, and MM execution is the final fallback. So a silenced player won't even have unlock or cooldown calculated; an unlocked skill won't even have its cooldown calculated. The GCD gate is inside `gate.check`, but if this skill has `gcd.ignore: true` it's skipped.
+:::
 
 > ⚙ **Exact rules for the health / hunger gate** (blood-sacrifice / hunger-sacrifice costs):
 > - **Health**: when `player.health <= healthCost`, the skill **can't be cast**—meaning even health **exactly equal to** the cost value fails (using `<=`), to avoid killing yourself.
@@ -191,7 +193,9 @@ When blocked by `ON_COOLDOWN`, QS actually sends only **one** `cooldownInfo()` m
 | **Normal cooldown** (binary cooldown) | `§c技能冷却中 §7还需 {time}` | `{time}` takes the **maximum remaining of the three**—"the skill's own cooldown / cooldown group / GCD" |
 | **Charge-based skill** | `§c充能 §e{avail}§7/§e{max}` | Shows charge count; **when not full it appends** ` §7(下一层 {time})`, omitted when full |
 
-> 💡 Don't think of it as three separate messages—under the hood there are only two: one for normal cooldowns, one for charge-based skills (the charge one differs only in the trailing "next charge" suffix between full / not-full). For normal cooldowns the three cooldown sources (skill / cooldown group / GCD) are merged by taking the max remaining and shown on a single line.
+::: tip Tip
+💡 Don't think of it as three separate messages—under the hood there are only two: one for normal cooldowns, one for charge-based skills (the charge one differs only in the trailing "next charge" suffix between full / not-full). For normal cooldowns the three cooldown sources (skill / cooldown group / GCD) are merged by taking the max remaining and shown on a single line.
+:::
 
 ---
 
