@@ -1,3 +1,5 @@
+<p align="center"><img src="/img/qr/logo.png" alt="QinhRuins" width="640"></p>
+
 # QinhRuins (QR) Official Documentation
 
 > **The Qinhuai procedural realm engine** — a Roguelike ruin generation and exploration system built for Paper / Purpur / Spigot **1.21.11+** and **Java 25+**.

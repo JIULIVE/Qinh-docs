@@ -1,3 +1,5 @@
+<p align="center"><img src="/img/qr/logo.png" alt="QinhRuins" width="640"></p>
+
 # QinhRuins（QR）官方文档
 
 > **秦淮程序化秘境引擎** — 为 Paper / Purpur / Spigot **1.21.11+**、**Java 25+** 打造的 Roguelike 遗迹生成与探索系统。
