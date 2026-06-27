@@ -1,4 +1,4 @@
-<p align="center"><img src="/img/qr/logo.png" alt="QinhRuins" width="640"></p>
+![QinhRuins](/img/qr/logo.png)
 
 # QinhRuins（QR）官方文档
 
