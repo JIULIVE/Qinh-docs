@@ -331,8 +331,8 @@ export const QR = {
     },
     {
       zh: '参考手册', en: 'Reference', icon: '📚', dir: 'QR/05-参考',
-      descZh: '速查区：命令、权限、config.yml、内置内容清单、资源文件、诊断排错、FAQ 与术语表。',
-      descEn: 'Quick reference — commands, permissions, config.yml, bundled content, resource files, troubleshooting, FAQ, and glossary.',
+      descZh: '速查区：命令、权限、config.yml、内置内容清单、资源文件、诊断排错、FAQ、术语表与更新日志。',
+      descEn: 'Quick reference — commands, permissions, config.yml, bundled content, resource files, troubleshooting, FAQ, glossary, and changelog.',
       items: [
         ['命令大全', 'Commands', 'QR/05-参考/命令', '⌨️'],
         ['权限节点', 'Permissions', 'QR/05-参考/权限', '🔑'],
@@ -342,6 +342,7 @@ export const QR = {
         ['诊断与排错', 'Troubleshooting', 'QR/05-参考/诊断排错', '🚑'],
         ['FAQ', 'FAQ', 'QR/05-参考/FAQ', '❓'],
         ['术语表', 'Glossary', 'QR/05-参考/术语表', '📖'],
+        ['更新日志', 'Changelog', 'QR/05-参考/更新日志', '📅'],
       ],
     },
   ],
