@@ -2,7 +2,7 @@
 
 > **The core foundation of the Qinhuai ecosystem** — a unified platform library built for Paper / Purpur / Spigot **1.21.11+** and **Java 25+**.
 >
-> Current version: **1.2.0**　·　Main class: `com.qinhuai.corelib.QinhCoreLib`　·　Hard dependency: **none** (it is the one others depend on)
+> Current version: **1.3.0**　·　Main class: `com.qinhuai.corelib.QinhCoreLib`　·　Hard dependency: **none** (it is the one others depend on)
 
 ---
 
@@ -61,4 +61,4 @@ The docs are organized by **reader role**. First decide who you are, then enter 
 
 - Tokens of the form `qcl.status`, `ItemManagerAPI`, `economy.default-provider`, `mm-龙剑` are **code identifiers / config keys / reference syntax** — copy them verbatim, **they are case-sensitive**.- Chinese text inside code blocks is **comments / explanation**; keep the key names in English for what actually gets written into YAML.
 - All YAML / file paths are by default relative to `plugins/QinhCoreLib/`.
-- This documentation is written against source **1.2.0** and aligned with code behavior; if your actual version differs, defer to `/qcl status` and the console log.
+- This documentation is written against source **1.3.0** and aligned with code behavior; if your actual version differs, defer to `/qcl status` and the console log.

@@ -4,7 +4,7 @@
 
 > **The Qinhuai procedural realm engine** — a Roguelike ruin generation and exploration system built for Paper / Purpur / Spigot **1.21.11+** and **Java 25+**.
 >
-> Current version: **1.0.0**　·　Alias: **/qr**　·　Hard dependency: **QinhCoreLib**
+> Current version: **1.1.0**　·　Alias: **/qr**　·　Hard dependency: **QinhCoreLib**
 
 ---
 

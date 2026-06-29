@@ -14,7 +14,7 @@ The QR runtime is already installed on the server; you only need a **compile-tim
 ### Install to local Maven
 
 ```bash
-mvn install:install-file -Dfile=QinhRuins-1.0.0.jar -DgroupId=com.qinhuai -DartifactId=QinhRuins -Dversion=1.0.0 -Dpackaging=jar
+mvn install:install-file -Dfile=QinhRuins-1.1.0.jar -DgroupId=com.qinhuai -DartifactId=QinhRuins -Dversion=1.1.0 -Dpackaging=jar
 ```
 
 ### pom.xml
@@ -23,7 +23,7 @@ mvn install:install-file -Dfile=QinhRuins-1.0.0.jar -DgroupId=com.qinhuai -Darti
 <dependency>
   <groupId>com.qinhuai</groupId>
   <artifactId>QinhRuins</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <scope>provided</scope>
 </dependency>
 ```
